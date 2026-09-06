@@ -6,210 +6,240 @@
     <title>Student Portfolio</title>
 </head>
 <style>
-   * {
+  * {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+html,
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 100%;
+    width: 100%;
     overflow-x: hidden;
 }
 
-
-.navbar {
-    width: 100%;
-    background-color: #333;
-    padding: 15px 20px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf8fb;
+    color: #1f2937;
 }
 
-.navbar ul {
-    list-style: none;
+
+
+.page {
+    display: grid;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-columns: 200px 1fr;
+}
+
+
+
+
+.navbar {
+    background-color: #172554;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    gap: 40px;
+}
+
+
+.navbar ul {
+    display: flex;
     flex-wrap: wrap;
-    gap: 25px;
-    margin: 0;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
     padding: 0;
+    margin: 0;
 }
 
 .navbar li {
-    margin: 0;
-    padding: 0;
+    list-style: none;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
-    display: block;
-    padding: 5px 8px;
+    font-size: 18px;
 }
 
-
-
-
-
-section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 30px;
+.navbar a:hover {
+    color: #f9a8d4;
 }
+
 
 
 
 #home {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
-    min-height: 500px;
+    gap: 60px;
+    padding: 70px 10%;
+    background-color: #fce7f3;
 }
 
-#home .intro {
+#home img {
+    width: 230px;
+    height: 467px;
+    object-fit: cover;
+    border-radius: 20px;
+    max-width: 100%;
+}
+
+.img img {
+    border-radius: 10%;
+}
+
+.intro {
     flex: 1;
     min-width: 0;
 }
 
-#home .intro h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.intro h1 {
+    font-size: 45px;
+    color: #172554;
 }
 
-#home .intro p {
+.intro p {
     font-size: 18px;
+    line-height: 1.6;
 }
 
-#home img {
-    width: 300px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
 
 
 
 .container {
     display: flex;
-    gap: 30px;
-    width: 100%;
+    gap: 25px;
+    padding: 60px 8%;
 }
 
 .container section {
     flex: 1;
     min-width: 0;
-    padding: 30px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .container h2 {
-    margin-top: 0;
+    color: #172554;
 }
 
 
 
+
+#projects {
+    padding: 60px 8%;
+    background-color: #fdf8fb;
+}
+
 #projects h2 {
     text-align: center;
-    margin-bottom: 30px;
+    font-size: 35px;
+    color: #172554;
+    margin-bottom: 35px;
 }
 
 .projects-cards {
     display: flex;
+    justify-content: space-between;
     gap: 30px;
-    width: 100%;
 }
 
 .card {
     flex: 1;
     min-width: 0;
     padding: 25px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: none;
 }
 
 .card h4 {
-    margin-top: 0;
+    color: #be185d;
+    font-size: 20px;
 }
 
-
-
-img {
-    max-width: 100%;
-    height: auto;
+.card p {
+    line-height: 1.6;
 }
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
 
 
 
 @media (max-width: 768px) {
 
+    
     .navbar {
-        padding: 12px 10px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 10px;
     }
 
     .navbar ul {
-        gap: 8px;
+        justify-content: center;
+        gap: 15px;
     }
 
     .navbar a {
-        font-size: 14px;
-        padding: 6px 8px;
+        font-size: 16px;
     }
 
-    section {
-        padding: 45px 20px;
-    }
 
    
-
     #home {
         flex-direction: column;
         text-align: center;
         gap: 30px;
-    }
-
-    #home .intro {
-        width: 100%;
-    }
-
-    #home .intro h1 {
-        font-size: 34px;
+        padding: 50px 6%;
     }
 
     #home img {
-        width: 250px;
+        width: 230px;
+        height: auto;
+        max-height: 467px;
     }
 
-    
+    .intro h1 {
+        font-size: 38px;
+    }
 
+
+   
     .container {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
+        padding: 50px 6%;
     }
 
     .container section {
         width: 100%;
-        padding: 25px;
     }
 
-    /* Projects */
 
+    
     .projects-cards {
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
     }
 
     .card {
         width: 100%;
+    }
+
+    #projects {
+        padding: 50px 6%;
     }
 }
 
@@ -218,45 +248,56 @@ img {
 @media (max-width: 480px) {
 
     .navbar {
-        padding: 10px 5px;
+        padding: 12px 5px;
+        gap: 8px;
     }
 
     .navbar ul {
-        gap: 4px;
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
     }
 
     .navbar a {
-        font-size: 13px;
-        padding: 5px 6px;
+        font-size: 14px;
+        padding: 4px 5px;
     }
 
-    section {
-        padding: 35px 15px;
-    }
 
+    
     #home {
-        min-height: auto;
-        padding-top: 40px;
+        padding: 40px 5%;
+        gap: 25px;
     }
 
-    #home .intro h1 {
-        font-size: 28px;
+    .intro h1 {
+        font-size: 30px;
     }
 
-    #home .intro p {
+    .intro p {
         font-size: 16px;
     }
 
     #home img {
         width: 200px;
+        height: auto;
+    }
+
+    .container {
+        padding: 40px 5%;
+        gap: 20px;
     }
 
     .container section {
         padding: 20px;
     }
 
-    .projects-cards {
-        gap: 15px;
+    #projects {
+        padding: 40px 5%;
+    }
+
+    #projects h2 {
+        font-size: 30px;
     }
 
     .card {
